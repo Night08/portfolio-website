@@ -187,7 +187,7 @@ const DashboardProjects = () => {
                 htmlFor="title"
                 className="block text-sm font-medium text-gray-700"
               >
-                Company
+                Project Name
               </label>
               <input
                 id="title"

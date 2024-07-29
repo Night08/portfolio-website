@@ -247,7 +247,7 @@ const SkillsTable = ({ skills }: SkillsTableProps) => {
             ))}
             <dialog id="update_skill_modal" className="modal">
               <div className="modal-box">
-                <h3 className="font-bold text-lg mb-4"> Update Experience</h3>
+                <h3 className="font-bold text-lg mb-4"> Update Skills</h3>
 
                 <button
                   className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"

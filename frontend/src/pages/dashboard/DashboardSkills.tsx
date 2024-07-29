@@ -86,7 +86,7 @@ const DashboardSkills = () => {
       };
       await addSkill(formData);
 
-      alert("");
+    
       toast.success(`Skills added successfully!`, {
         position: "bottom-left",
         autoClose: 5000,
@@ -162,7 +162,7 @@ const DashboardSkills = () => {
       {/* // dialog box  */}
       <dialog id="add_skill_modal" className="modal">
         <div className="modal-box">
-          <h3 className="font-bold text-lg mb-4"> Add New Experience</h3>
+          <h3 className="font-bold text-lg mb-4"> Add New Skills</h3>
 
           <button
             className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2"
@@ -230,7 +230,7 @@ const DashboardSkills = () => {
                 control={control}
                 render={({ field }) => (
                   <Select
-                    className="mt-2"
+                    className="mt-2 z-50"
                     options={iconOptions}
                     formatOptionLabel={(option: IconOption) => (
                       <div

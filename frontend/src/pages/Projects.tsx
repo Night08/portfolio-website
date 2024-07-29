@@ -47,9 +47,13 @@ interface IFormInputs {
 }
 
 const Projects = () => {
-  const { addProject, projects } = useProjectStore();
+  const { addProject, projects, fetchProjects } = useProjectStore();
   const { user } = useUserStore();
 
+  useEffect(() => {
+    fetchProjects()
+  }, [])
+  
   const {
     register,
     handleSubmit,
@@ -271,7 +275,7 @@ const Projects = () => {
                       htmlFor="title"
                       className="block text-sm font-medium text-gray-700"
                     >
-                      Company
+                      Project Name
                     </label>
                     <input
                       id="title"

@@ -98,7 +98,6 @@ app.use("/api/emails", emailRoutes);
 
 // routes
 app.get("/", (req: Request, res: Response) => {
-  console.log(process.env.JWT_SECRET_KEY)
   res.send("Portfolio Backend Working Properly!!");
 });
 

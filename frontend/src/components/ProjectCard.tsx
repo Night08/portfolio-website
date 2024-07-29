@@ -26,12 +26,12 @@ const ProjectCard = ({ projects }: ProjectProps) => {
                   src={project.thumbnailImg}
                   alt="project"
                   className="h-[250px] w-full"
-                />
+                /> 
               </figure>
               <div className="card-body p-4 pb-5 ">
                 <h2 className="card-title">{project.title}</h2>
-                <p className="text-sm text-slate-700">
-                  {project.description ? project.description.slice(0, 20) : ""}
+                <p className="text-sm text-slate-700 min-w-[200px]">
+                  {project.description ? project.description.slice(0, 20) : ""}...
                 </p>
                 <div className="card-actions justify-start">
                   {project.technologies.map((tech, techIndex) => (
