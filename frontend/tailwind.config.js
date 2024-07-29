@@ -5,7 +5,7 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {  scrollBehavior: ['smooth']},
   },
   plugins: [
     require('daisyui'),

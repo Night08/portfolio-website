@@ -4,7 +4,7 @@ import {Response} from 'express';
 
 const connectToMongo = async (res: Response) => {
     const mongoURI = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.vdt2mpk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0`;
-
+    process.env.DB_PASSWORD
     try {
         await mongoose.connect(mongoURI);
         console.log("Connected to MongoDB successfully");

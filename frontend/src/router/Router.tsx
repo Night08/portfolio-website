@@ -12,59 +12,75 @@ import DashboardExperience from "../pages/dashboard/DashboardExperience";
 import DashboardProjects from "../pages/dashboard/DashboardProjects";
 import Home from "../pages/Home";
 import DashboardUser from "../pages/dashboard/DashboardUser";
+import Signup from "../pages/authentication/Signup";
+import Login from "../pages/authentication/Login";
+import ProjectInfo from "../pages/ProjectInfo";
 
 
 const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <App />,
-      children: [
-        {
-          path: "/",
-          element: <Home />
+  {
+    path: "/",
+    element: <App />,
+    children: [
+      {
+        path: "/",
+        element: <Home />
       },
-        {
-            path: "/skills",
-            element: <Skills />
-        },
-        {
-          path: "/experiences",
-          element: <Experiences />
+      {
+        path: "/skills",
+        element: <Skills />
+      },
+      {
+        path: "/experiences",
+        element: <Experiences />
       },
       {
         path: "/contact",
         element: <Contact />
-    },
-    {
-      path: "/projects",
-      element: <Projects />
-  },
-      ]
       },
-      
       {
-        path: "/dashboard",
-        element: <Dashboard />,
-        children: [
-          {
-              path: "skills",
-              element: <DashboardSkills />
-          },
-          {
-            path: "experiences",
-            element: <DashboardExperience />
-        },
+        path: "/projects",
+        element: <Projects />
+      },
+      {
+        path: "/projects/:id",
+        element: <ProjectInfo />
+      },
+      {
+        path: "/sign-up",
+        element: <Signup />
+      },
+      {
+        path: "/login",
+        element: <Login />
+      },
+
+    ]
+  },
+
+  {
+    path: "/dashboard",
+    element: <Dashboard />,
+    children: [
+      {
+        path: "skills",
+        element: <DashboardSkills />
+      },
+      {
+        path: "experiences",
+        element: <DashboardExperience />
+      },
       {
         path: "projects",
         element: <DashboardProjects />
-    },
-    {
-      path: "users",
-      element: <DashboardUser />
+      },
+      {
+        path: "users",
+        element: <DashboardUser />
+      }
+    ]
   }
-        ]
-        }
 
-  ]);
-  
-  export default router;
+]);
+
+export default router;
