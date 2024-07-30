@@ -132,10 +132,10 @@ const Dashboard = () => {
 
               <div className="md:ml-64">
                 <Dashboardheader />
-                <div className="bg-white pt-4 md:pt-0">
+                <div className="bg-white pt-4 md:pt-0 ">
                   {location.pathname === "/dashboard" ||
                   location.pathname === "/dashboard/" ? (
-                    <div className="flex flex-col items-center justify-center min-h-screen">
+                    <div className="flex flex-col items-center justify-center min-h-[95%] pt-[20%]">
                       <h2 className="font-semibold text-xl align-middle">
                         Manage the dashboard through tabs!
                       </h2>
